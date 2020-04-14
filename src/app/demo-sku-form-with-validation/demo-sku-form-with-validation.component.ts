@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder,FormGroup, Validators, AbstractControl} from '@angular/forms';
+import {FormBuilder,FormGroup, Validators, AbstractControl, FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-demo-sku-form-with-validation',
@@ -12,12 +12,17 @@ export class DemoSkuFormWithValidationComponent implements OnInit {
   constructor(fb: FormBuilder) 
   {
     this.myForm = fb.group({
-      'sku': ['', Validators.required]
+      'sku': ['', Validators.compose([Validators.required,this.skuValidator])]
     });
 
     this.sku = this.myForm.controls['sku'];
   }
-
+  skuValidator(control: FormControl): {[s: string]:boolean}
+  {
+    if (!control.value.match(/^123/)) {
+      return {invalidSku: true};
+    }
+  }
   ngOnInit() {
   }
 
