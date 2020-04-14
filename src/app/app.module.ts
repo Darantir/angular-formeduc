@@ -8,10 +8,11 @@ import { DemoSkuFormComponent } from './demo-sku-form/demo-sku-form.component';
 import { DemoSkuFormWithBuilderComponent } from './demo-sku-form-with-builder/demo-sku-form-with-builder.component';
 import { DemoSkuFormWithValidationComponent } from './demo-sku-form-with-validation/demo-sku-form-with-validation.component';
 import { DemoSkuFormWithCustomValidationComponent } from './demo-sku-form-with-custom-validation/demo-sku-form-with-custom-validation.component';
+import { DemoFormWithEventsComponent } from './demo-form-with-events/demo-form-with-events.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule ],
-  declarations: [ AppComponent, HelloComponent, DemoSkuFormComponent, DemoSkuFormWithBuilderComponent, DemoSkuFormWithValidationComponent, DemoSkuFormWithCustomValidationComponent ],
+  declarations: [ AppComponent, HelloComponent, DemoSkuFormComponent, DemoSkuFormWithBuilderComponent, DemoSkuFormWithValidationComponent, DemoSkuFormWithCustomValidationComponent, DemoFormWithEventsComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
